@@ -28,3 +28,17 @@ In order to add packages to our new virtual environment, we create a file called
 ```
 pip install -r requirements.txt
 ```
+
+### Deploying our functions
+
+First, we have to set out project ID with the following command:
+
+```
+gcloud config set project [YOUR_PROJECT_ID]
+```
+
+Then we deply our function with this command:
+
+```
+gcloud functions deploy [FUNCTION_NAME] --runtime python37 --trigger-http
+```
